@@ -1,0 +1,58 @@
+export const PRODUCTS = [
+  {
+    id: 1,
+    name: "Voucher Mobile Legends 1000 Diamonds",
+    price: 150000,
+    image: "https://placehold.co/400x300?text=MLBB",
+    category: "Voucher",
+  },
+  {
+    id: 2,
+    name: "Steam Wallet Code $10",
+    price: 165000,
+    image: "https://placehold.co/400x300?text=Steam",
+    category: "Top Up",
+  },
+  {
+    id: 3,
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    id: 4,
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    id: 5,
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    id: 6,
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    id: 7,
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    id: 8,
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+];

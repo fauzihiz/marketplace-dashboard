@@ -71,13 +71,13 @@ Bagaimana kamu menangani performa? (Jawaban: SSR untuk SEO, MongoDB indexing unt
 ### Hari 1: Fokus di "Wajah" (Frontend & UI)
 #### Goal: Web kamu terlihat profesional dan sudah bisa navigasi, meski datanya masih palsu (dummy).
 
-[ ] Setup Project: Jalankan npx create-next-app@latest. Pilih Tailwind & App Router.
+[✔] Setup Project: Jalankan npx create-next-app@latest. Pilih Tailwind & App Router.
 
-[ ] Install Mantine UI: Ikuti langkah instalasi di web Mantine. Cukup buat satu Navbar dan satu Grid untuk daftar produk.
+[✔] Install Mantine UI: Ikuti langkah instalasi di web Mantine. Cukup buat satu Navbar dan satu Grid untuk daftar produk.
 
-[ ] Buat Data Dummy: Buat satu file data.js berisi array objek produk (nama, harga, gambar).
+[✔] Buat Data Dummy: Buat satu file data.js berisi array objek produk (nama, harga, gambar).
 
-[ ] Render List: Gunakan .map() untuk menampilkan data dummy tersebut ke layar pakai Card dari Mantine.
+[✔] Render List: Gunakan .map() untuk menampilkan data dummy tersebut ke layar pakai Card dari Mantine.
 
 - Progress: Kamu sudah punya web yang "kelihatan" jadi. Ini booster semangat yang besar!
 
