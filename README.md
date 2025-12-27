@@ -84,15 +84,15 @@ Bagaimana kamu menangani performa? (Jawaban: SSR untuk SEO, MongoDB indexing unt
 ### Hari 2: Fokus di "Isi" (Database & API Sederhana)
 #### Goal: Data yang muncul di web bukan lagi dari file data.js, tapi dari MongoDB.
 
-[ ] Setup MongoDB Atlas: Daftar gratis, buat cluster. Copy "Connection String"-nya.
+[✔] Setup MongoDB Atlas: Daftar gratis, buat cluster. Copy "Connection String"-nya.
 
-[ ] Install Mongoose: npm install mongoose.
+[✔] Install Mongoose: npm install mongoose.
 
-[ ] Hubungkan Database: Buat satu file lib/db.js untuk koneksi. (Cari tutorial "Next.js MongoDB connection" - cukup copas pola yang ada).
+[✔] Hubungkan Database: Buat satu file lib/db.js untuk koneksi. (Cari tutorial "Next.js MongoDB connection" - cukup copas pola yang ada).
 
-[ ] Buat 1 Route API: Di Next.js, buat file di app/api/products/route.ts. Isinya cuma fungsi untuk GET semua produk dari DB.
+[✔] Buat 1 Route API: Di Next.js, buat file di app/api/products/route.ts. Isinya cuma fungsi untuk GET semua produk dari DB.
 
-[ ] Ganti Data Dummy: Ubah map() di Hari 1 tadi untuk mengambil data dari API yang baru kamu buat menggunakan fetch.
+[✔] Ganti Data Dummy: Ubah map() di Hari 1 tadi untuk mengambil data dari API yang baru kamu buat menggunakan fetch.
 
 - Progress: Kamu sudah resmi jadi "Fullstack"! Kamu sudah bisa narik data dari database ke layar.
 
