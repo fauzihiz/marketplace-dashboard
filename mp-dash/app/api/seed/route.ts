@@ -9,7 +9,55 @@ export async function GET() {
     // Data dummy yang kemarin kita buat
     const dummyProducts = [
       { name: "Voucher MLBB 1000 DM", price: 150000, category: "Voucher", image: "https://placehold.co/400x300?text=MLBB" },
-      { name: "Steam Wallet $10", price: 165000, category: "Top Up", image: "https://placehold.co/400x300?text=Steam" }
+      { name: "Steam Wallet $10", price: 165000, category: "Top Up", image: "https://placehold.co/400x300?text=Steam" },
+      {
+    name: "Voucher Mobile Legends 1000 Diamonds",
+    price: 150000,
+    image: "https://placehold.co/400x300?text=MLBB",
+    category: "Voucher",
+  },
+  {
+    name: "Steam Wallet Code $10",
+    price: 165000,
+    image: "https://placehold.co/400x300?text=Steam",
+    category: "Top Up",
+  },
+  {
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  },
+  {
+    name: "Gaming Mouse RGB Pro",
+    price: 450000,
+    image: "https://placehold.co/400x300?text=Mouse",
+    category: "Gear",
+  }
     ];
 
     // Bersihkan dulu databasenya, lalu masukkan data baru

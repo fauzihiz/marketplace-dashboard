@@ -99,13 +99,13 @@ Bagaimana kamu menangani performa? (Jawaban: SSR untuk SEO, MongoDB indexing unt
 ### Hari 3: Fokus di "Interaksi" (Jotai & State)
 #### Goal: User bisa klik "Tambah ke Keranjang" dan jumlahnya muncul di Navbar.
 
-[ ] Install Jotai: npm install jotai.
+[✔] Install Jotai: npm install jotai.
 
-[ ] Buat Atom: Buat file store.js. Isinya cuma: export const cartAtom = atom([]).
+[✔] Buat Atom: Buat file store.js. Isinya cuma: export const cartAtom = atom([]).
 
-[ ] Fitur Add to Cart: Di kartu produk, tambah tombol. Saat diklik, dia akan push data ke cartAtom.
+[✔] Fitur Add to Cart: Di kartu produk, tambah tombol. Saat diklik, dia akan push data ke cartAtom.
 
-[ ] Tampilkan di Navbar: Panggil cartAtom di Navbar untuk menampilkan angka jumlah barang.
+[✔] Tampilkan di Navbar: Panggil cartAtom di Navbar untuk menampilkan angka jumlah barang.
 
 [ ] Deploy ke Vercel: Hubungkan GitHub ke Vercel. Klik Deploy. Selesai.
 

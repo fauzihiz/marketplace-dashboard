@@ -1,7 +1,17 @@
 'use client';
+import { useAtom } from 'jotai';
+import { cartAtom } from '@/store/cartAtom';
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
 
 export function ProductCard({ product }: { product: any }) {
+  const [cart, setCart] = useAtom(cartAtom);
+
+  const addToCart = () => {
+    // Tambah produk ke dalam array cart yang sedia ada
+    setCart([...cart, product]);
+    //alert(`${product.name} ditambah ke bakul!`);
+  };
+
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section>
@@ -19,6 +29,10 @@ export function ProductCard({ product }: { product: any }) {
 
       <Button variant="light" color="blue" fullWidth mt="md" radius="md">
         Beli Sekarang
+      </Button>
+
+      <Button onClick={addToCart} variant="light" color="blue" fullWidth mt="md">
+        Tambah ke Keranjang
       </Button>
     </Card>
   );

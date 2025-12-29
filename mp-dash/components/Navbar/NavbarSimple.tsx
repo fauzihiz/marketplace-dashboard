@@ -1,4 +1,6 @@
 'use client';
+import { useAtomValue } from 'jotai'; // Kita guna Value saja sebab Navbar cuma membaca
+import { cartAtom } from '@/store/cartAtom';
 import { useState } from 'react';
 import {
   Icon2fa,
@@ -25,6 +27,7 @@ const data = [
 ];
 
 export function NavbarSimple() {
+  const cart = useAtomValue(cartAtom);
   const [active, setActive] = useState('Billing');
 
   const links = data.map((item) => (
@@ -51,6 +54,9 @@ export function NavbarSimple() {
           <Code fw={700}>v3.1.2</Code>
         </Group>
         {links}
+        <div style={{ padding: '10px', backgroundColor: '#eef', borderRadius: '5px' }}>
+         🛒 Keranjang: <b>{cart.length}</b> Item
+        </div>
       </div>
 
       <div className={classes.footer}>
