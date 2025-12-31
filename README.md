@@ -1,11 +1,9 @@
 # Performance-First Marketplace Engine
 
 ## 🛠 Tech Stack:
-- Frontend: Next.js (App Router), TypeScript, TailwindCSS, Mantine UI.
+- Monolith: Next.js, TypeScript, Tailwind CSS, Mantine UI.
 
 - State Management: Jotai (untuk handle keranjang dan filter kompleks).
-
-- Backend: Node.js, Express.js, TypeScript.
 
 - Database: MongoDB (dengan fokus pada Aggregation Pipeline).
 
@@ -18,55 +16,7 @@
 
 - Mobile-First Responsive UI: Menggunakan Mantine UI + Tailwind untuk interface yang slick di mobile (menjawab kebutuhan mobile-first).
 
-## 📅 To-Do List (3 Hari)
-### Hari 1: Backend & Arsitektur Database (Fokus: Struktur & Integritas)
-  [ ] Setup Project (Next.js, Express, TypeScript).
-
-  [ ] Setup MongoDB & Desain Schema (Fokus pada: Product, Category, Order).
-
-  [ ] Buat API CRUD untuk produk menggunakan Express + TypeScript.
-
-  [ ] Problem Solving: Implementasikan Indexing di MongoDB pada field pencarian dan optimasi query menggunakan .aggregate().
-
-  [ ] Integrasi Git dengan branching strategy (feature/backend-setup).
-
-### Hari 2: Frontend & UI Components (Fokus: Mantine & Tailwind)
-  [ ] Setup Mantine UI Provider & Theme (sesuaikan dengan branding gaming).
-
-  [ ] Buat Layout Responsive (Navbar, Sidebar Filter, Product Grid).
-
-  [ ] Implementasi Jotai untuk Global State: Global Cart dan Search Filters.
-
-  [ ] Fetching data menggunakan Next.js Server Components untuk List Produk.
-
-  [ ] Problem Solving: Buat komponen Reusable di Mantine UI untuk menangani Loading State (Skeleton) dan Empty State.
-
-### Hari 3: Optimasi, SEO, & Finishing (Fokus: Performance)
-  [ ] Implementasi Dinamis Metadata untuk SEO di halaman detail produk.
-
-  [ ] Setup ESLint & Prettier untuk menjamin Clean Code.
-
-  [ ] Optimasi Gambar dengan next/image untuk performa tinggi.
-
-  [ ] Testing Manual: Pastikan Mobile View sempurna.
-
-  [ ] Problem Solving: Dokumentasikan di README.md tentang bagaimana kamu menangani race conditions saat update cart atau bagaimana kamu mengoptimasi query database.
-
-## 📦 Deliverables (Apa yang dikumpulkan)
-- Link GitHub Repository: Pastikan ada riwayat Pull Request (PR) meskipun kamu kerja sendiri, untuk menunjukkan kamu paham alur kerja tim.
-
-- Live Demo Link: (Bisa menggunakan Vercel untuk Frontend dan Render/Railway untuk Backend).
-
-- Technical Documentation (README): Ini paling krusial. Jelaskan:
-
-Kenapa pakai Jotai dibanding Redux? (Jawaban: Lebih ringan dan atomik untuk skalabilitas marketplace).
-
-Bagaimana kamu menangani performa? (Jawaban: SSR untuk SEO, MongoDB indexing untuk kecepatan filter).
-
-
-===============
-
-## Small Scope
+## 📅 To-Do List (6 Hari)
 
 ### Hari 1: Fokus di "Wajah" (Frontend & UI)
 #### Goal: Web kamu terlihat profesional dan sudah bisa navigasi, meski datanya masih palsu (dummy).
@@ -107,6 +57,49 @@ Bagaimana kamu menangani performa? (Jawaban: SSR untuk SEO, MongoDB indexing unt
 
 [✔] Tampilkan di Navbar: Panggil cartAtom di Navbar untuk menampilkan angka jumlah barang.
 
-[ ] Deploy ke Vercel: Hubungkan GitHub ke Vercel. Klik Deploy. Selesai.
+[✔] Deploy ke Vercel: Hubungkan GitHub ke Vercel. Klik Deploy. Selesai.
 
 - Progress: Web kamu sudah interaktif dan bisa diakses orang lain (online).
+
+### Hari 4: Auth, RBAC & Produk Management (CRUD)
+#### Goal: User bisa login dan Admin bisa kelola barang.
+
+Requirement:
+
+[] Setup Next-Auth (Google Login atau Email/Password).
+
+[] Role Schema di MongoDB (Role: admin & customer).
+
+[] Admin Dashboard: Halaman untuk Create, Read, Update, Delete (CRUD) produk.
+
+[] Dynamic Routing & Detail Page: Ketika produk di klik, muncul halaman detail khusus produk tersebut (menggunakan [id]/page.tsx).
+
+- Why: Tanpa Auth, kita tidak bisa tahu siapa yang punya keranjang belanja dan siapa yang boleh edit harga barang.
+
+### Hari 5: Transaction, Stok Logic & Midtrans (Payment)
+#### Goal: User bisa beli dan bayar secara otomatis.
+
+Requirement:
+
+[] Checkout System: Mengirim data dari Jotai ke MongoDB sebagai "Order" baru.
+
+[] Checkout API: Mengunci harga saat itu dan mengecek stok.
+
+[] Integrasi Midtrans Snap: Muncul popup pembayaran.
+
+[] Webhook Handler: Menangkap laporan dari Midtrans jika user sudah bayar, lalu otomatis mengubah status di database ke "PAID".
+
+- Why: Ini adalah jantung dari Marketplace. Menunjukkan kamu bisa menangani uang dan sinkronisasi data.
+
+### Hari 6: Statistik Admin & Detail Finishing
+#### Goal: Admin bisa lihat grafik performa toko.
+
+Requirement:
+
+[] Filtering & Search: Mencari produk berdasarkan nama atau kategori secara real-time.
+
+[] Menggunakan MongoDB .aggregate() untuk menghitung total pendapatan bulanan.
+
+[] Visualisasi data dengan Chart (Mantine Charts/Recharts).
+
+- Why: Bisnis butuh angka. Mid-level dev harus bisa menyajikan data mentah menjadi wawasan bisnis.
